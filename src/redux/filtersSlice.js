@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// Başlangıç durumu (Ödevde belirtildiği gibi filters: { name: "" })
+// Başlangıç durumu 
 const initialState = {
   name: ""
 };
