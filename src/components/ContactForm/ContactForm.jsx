@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contactsSlice";
 import { nanoid } from "nanoid";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import css from "./ContactForm.module.css";
 // ... (Yalınlık için validasyon şeması kodlarını buraya eklemiyorum)
 
 const ContactForm = () => {
@@ -19,10 +20,16 @@ const ContactForm = () => {
 
   return (
     <Formik initialValues={{ name: "", number: "" }} onSubmit={handleSubmit}>
-      <Form>
-        <Field name="name" />
-        <Field name="number" />
-        <button type="submit">Add Contact</button>
+      <Form className={css.form}>
+        <label className={css.label}>
+          Name
+          <Field name="name" className={css.input} />
+        </label>
+        <label className={css.label}>
+          Number
+          <Field name="number" className={css.input} />
+        </label>
+        <button type="submit" className={css.btn}>Add Contact</button>
       </Form>
     </Formik>
   );

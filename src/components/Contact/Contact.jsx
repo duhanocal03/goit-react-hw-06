@@ -5,13 +5,16 @@ import css from "./Contact.module.css";
 const Contact = ({ data: { id, name, number } }) => {
   const dispatch = useDispatch();
 
-  return (
+ return (
     <div className={css.card}>
-      <div>
-        <p>{name}</p>
-        <p>{number}</p>
+      <div className={css.info}>
+        <p className={css.name}>{name}</p>
+        <p className={css.number}>{number}</p>
       </div>
-      <button onClick={() => dispatch(deleteContact(id))}>
+      <button 
+        className={css.deleteBtn} 
+        onClick={() => dispatch(deleteContact(id))}
+      >
         Delete
       </button>
     </div>

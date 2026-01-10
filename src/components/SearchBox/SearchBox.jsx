@@ -10,7 +10,7 @@ const SearchBox = () => {
     dispatch(changeFilter(e.target.value)); // Her harf yazıldığında eylemi gönder
   };
 
-  return (
+ return (
     <div className={css.container}>
       <p className={css.label}>Find contacts by name</p>
       <input
